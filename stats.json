@@ -1,0 +1,274 @@
+{
+  "features": [
+    "having_IP",
+    "URL_Length",
+    "Shortining_Service",
+    "having_At_Symbol",
+    "double_slash_redirecting",
+    "Prefix_Suffix",
+    "having_Sub_Domain",
+    "SSLfinal_State",
+    "Domain_registeration_length",
+    "Favicon",
+    "port",
+    "HTTPS_token",
+    "Request_URL",
+    "URL_of_Anchor",
+    "Links_in_tags",
+    "SFH",
+    "Submitting_to_email",
+    "Abnormal_URL",
+    "Redirect",
+    "on_mouseover",
+    "RightClick",
+    "popUpWidnow",
+    "Iframe",
+    "age_of_domain",
+    "DNSRecord",
+    "web_traffic",
+    "Page_Rank",
+    "Google_Index",
+    "Links_pointing_to_page",
+    "Statistical_report"
+  ],
+  "features_reduced": [
+    "having_IP",
+    "URL_Length",
+    "Shortining_Service",
+    "having_At_Symbol",
+    "double_slash_redirecting",
+    "Prefix_Suffix",
+    "having_Sub_Domain",
+    "Domain_registeration_length",
+    "Favicon",
+    "port",
+    "HTTPS_token",
+    "Request_URL",
+    "Links_in_tags",
+    "SFH",
+    "Submitting_to_email",
+    "Abnormal_URL",
+    "Redirect",
+    "on_mouseover",
+    "RightClick",
+    "popUpWidnow",
+    "Iframe",
+    "age_of_domain",
+    "DNSRecord",
+    "web_traffic",
+    "Page_Rank",
+    "Google_Index",
+    "Links_pointing_to_page",
+    "Statistical_report"
+  ],
+  "top2_removed": [
+    "SSLfinal_State",
+    "URL_of_Anchor"
+  ],
+  "feature_importances": [
+    [
+      "SSLfinal_State",
+      0.311764
+    ],
+    [
+      "URL_of_Anchor",
+      0.259089
+    ],
+    [
+      "web_traffic",
+      0.074857
+    ],
+    [
+      "having_Sub_Domain",
+      0.061964
+    ],
+    [
+      "Links_in_tags",
+      0.042232
+    ],
+    [
+      "Prefix_Suffix",
+      0.039157
+    ],
+    [
+      "Request_URL",
+      0.020086
+    ],
+    [
+      "Links_pointing_to_page",
+      0.019841
+    ],
+    [
+      "SFH",
+      0.019395
+    ],
+    [
+      "Domain_registeration_length",
+      0.016892
+    ],
+    [
+      "age_of_domain",
+      0.016658
+    ],
+    [
+      "having_IP",
+      0.013159
+    ],
+    [
+      "DNSRecord",
+      0.012535
+    ],
+    [
+      "Google_Index",
+      0.012072
+    ],
+    [
+      "Page_Rank",
+      0.011925
+    ],
+    [
+      "URL_Length",
+      0.008488
+    ],
+    [
+      "HTTPS_token",
+      0.006639
+    ],
+    [
+      "Redirect",
+      0.006079
+    ],
+    [
+      "Submitting_to_email",
+      0.00553
+    ],
+    [
+      "popUpWidnow",
+      0.005182
+    ],
+    [
+      "Shortining_Service",
+      0.005054
+    ],
+    [
+      "Statistical_report",
+      0.004722
+    ],
+    [
+      "having_At_Symbol",
+      0.004719
+    ],
+    [
+      "Favicon",
+      0.004111
+    ],
+    [
+      "Abnormal_URL",
+      0.0039
+    ],
+    [
+      "double_slash_redirecting",
+      0.00373
+    ],
+    [
+      "on_mouseover",
+      0.003463
+    ],
+    [
+      "port",
+      0.00289
+    ],
+    [
+      "Iframe",
+      0.002457
+    ],
+    [
+      "RightClick",
+      0.001408
+    ]
+  ],
+  "train_samples": 8955,
+  "test_samples": 2100,
+  "class_distribution": {
+    "legitimate": 5034,
+    "phishing": 3921
+  },
+  "full_model": {
+    "accuracy": 98.59,
+    "f1": 0.9875,
+    "precision": 0.9835,
+    "recall": 0.9917,
+    "cv_mean": 96.98,
+    "cv_std": 0.57,
+    "cv_scores": [
+      97.77,
+      97.32,
+      96.2,
+      96.48,
+      97.15
+    ],
+    "confusion_matrix": [
+      [
+        4992,
+        42
+      ],
+      [
+        84,
+        3837
+      ]
+    ],
+    "features_used": 30,
+    "hyperparams": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    }
+  },
+  "reduced_model": {
+    "accuracy": 95.27,
+    "f1": 0.9579,
+    "precision": 0.9586,
+    "recall": 0.9571,
+    "cv_mean": 91.54,
+    "cv_std": 0.49,
+    "cv_scores": [
+      92.41,
+      91.62,
+      91.51,
+      91.01,
+      91.12
+    ],
+    "confusion_matrix": [
+      [
+        4818,
+        216
+      ],
+      [
+        208,
+        3713
+      ]
+    ],
+    "features_used": 28,
+    "hyperparams": {
+      "n_estimators": 400,
+      "max_depth": 7,
+      "learning_rate": 0.08,
+      "subsample": 0.85,
+      "colsample_bytree": 0.75,
+      "min_child_weight": 2,
+      "gamma": 0.1
+    }
+  },
+  "test_predictions": {
+    "full_model": {
+      "phishing": 972,
+      "legitimate": 1128
+    },
+    "reduced_model": {
+      "phishing": 985,
+      "legitimate": 1115
+    }
+  }
+}
